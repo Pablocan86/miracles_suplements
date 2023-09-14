@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+
+  header {
+    @include flexbox(column, center, center);
+    width: 100%;
+    background-color: black;
+    .div-supraheader {
+      background-color: red;
+
+      a .instagram-icon {
+        width: 15px;
+        height: 15px;
+        margin: 5px 10px;
+      }
+    }
+
+    .div-logo-header {
+      background-color: black;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .logo-header {
+        width: 150px;
+        height: 90px;
+        margin-left: 20px;
+      }
+    }
+
+    #nav-header {
+      width: 100%;
+      background-color: black;
+      color: white;
+      border-top: 0.5px solid rgb(58, 56, 56);
+      padding-top: 20px;
+
+      .ul-uno-nav {
+        @include flexbox(row, center, center);
+        padding-bottom: 20px;
+        cursor: pointer;
+
+        li {
+          list-style: none;
+          width: 200px;
+          position: relative;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+          }
+
+          .ul-productos {
+            @include flexbox(column, center, center);
+            position: absolute;
+            right: 30px;
+            display: none;
+            z-index: 1;
+
+            li {
+              background-color: rgba(0, 0, 0, 0.724);
+              padding-top: 20px;
+              padding-left: 30px;
+              padding-bottom: 20px;
+
+              &:hover {
+                background-color: gray;
+              }
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+          &:hover > ul {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 15vhh;
+  }
+}

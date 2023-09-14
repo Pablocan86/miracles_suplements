@@ -1,0 +1,81 @@
+@media (max-width: 678px) and (min-width: 320px) {
+  header {
+    @include flexbox(row, center, center);
+
+    background-color: black;
+    .div-supraheader {
+      display: none;
+    }
+    .div-logo-header {
+      justify-content: flex-start;
+    }
+  }
+  .nav-xl {
+    display: none;
+  }
+
+  .nav-sm {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .nav-sm li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+
+  .nav-sm li {
+    padding: 15px 10px;
+    padding-top: 20px;
+  }
+
+  .nav-sm > li {
+    float: left;
+    text-align: center;
+    z-index: 1002;
+  }
+
+  .nav-sm li ul {
+    display: none;
+    position: absolute;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+
+  .nav-sm li:hover > ul {
+    display: block;
+    width: 100%;
+    z-index: 1001;
+  }
+  .icon-menu {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-redes {
+    width: 20px;
+    height: 20px;
+  }
+
+  .li-redes {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 10px;
+  }
+
+  body main .div-main-sections section {
+    @include flexbox(column, center, space-around);
+
+    article {
+      @include flexbox(row, space-evenly, center);
+      margin: 10px 10px 10px 10px;
+
+      img {
+        width: 100px;
+        height: 150px;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+nav {
+  background-color: black;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.div_nav {
+  background-color: black;
+  height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+.nav-xl li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-xl li a:hover {
+  background-color: gray;
+}
+
+.nav-xl > li {
+  float: left;
+}
+
+.nav-xl {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+.icon-flecha {
+  width: 15px;
+  height: 15px;
+}
+.dropdown1 {
+  display: none;
+  position: block;
+  background-color: black;
+  padding-left: 1px;
+  z-index: 1000;
+}
+
+.nav-xl li:hover > .dropdown1 {
+  display: block;
+}
+
+.nav-sm {
+  display: none;
+}
